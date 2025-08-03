@@ -88,3 +88,6 @@ footer {
   font-size: 1.1rem;
   border-bottom: 1px solid #333;
 }
+section.upcoming {
+  margin-top: 2rem;
+}
