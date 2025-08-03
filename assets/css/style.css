@@ -91,3 +91,37 @@ footer {
 section.upcoming {
   margin-top: 2rem;
 }
+.section-block {
+  margin: 2rem 0;
+}
+
+.section-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.image-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.image-group figure {
+  text-align: center;
+  max-width: 300px;
+}
+
+.image-group img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.image-group figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
