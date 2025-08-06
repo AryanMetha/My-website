@@ -312,3 +312,33 @@ body.dark .bordered-table th {
 body.dark .bordered-table td {
   border-color: #444;
 }
+.credit-entry {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.credit-entry img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.credit-text {
+  flex: 1;
+}
+
+.credit-text h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 1rem 0;
+}
+
