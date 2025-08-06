@@ -287,3 +287,28 @@ input:checked + .slider::before {
 .slider.round::before {
   border-radius: 50%;
 }
+.bordered-table {
+  width: 100%;
+  border: 1px solid #1976d2;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  color: inherit;
+  font-family: inherit;
+}
+.bordered-table th,
+.bordered-table td {
+  border: 1px solid #1976d2;
+  padding: 0.3rem 0.6rem;
+}
+.bordered-table th {
+  font-weight: bold;
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+body.dark .bordered-table th {
+  background: #222b36;
+  color: #90caf9;
+}
+body.dark .bordered-table td {
+  border-color: #444;
+}
