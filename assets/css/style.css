@@ -4,7 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
+
+
+/*html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f8fb;
   color: #1a1a1a;
@@ -12,6 +14,47 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}*/
+html, body {
+background-color: #f4f8fb;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header | scrollable | bottom */
+}
+
+/* Header stays at top */
+.site-header {
+  background: linear-gradient(to right, #0d47a1, #1976d2);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Middle gets its own scrollbar */
+#scroll-region {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+             min-height: 100%;    /* make it fill available space */
+  scroll-snap-type: y mandatory; /* enable vertical snap */
+}
+#scroll-region .section-block {
+  scroll-snap-align: start;   /* each block snaps into view */
+       min-height: 80%; /* each takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* center contents vertically */
+}
+
+/* Bottom section always visible */
+.upcoming, footer {
+  background: #e3f2fd;
 }
 
 /* Header */
@@ -49,6 +92,27 @@ html, body {
   margin-top: 2rem;
 }
 
+
+#scroll-region {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* smooth on iOS */
+  padding: 1rem;
+}
+
+/* Fixed bottom margin/strip */
+.bottom-strip {
+  border-top: 1px solid #ccc;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+.bottom-strip hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
 /* Main Content Layout */
 .content {
   flex: 1;
@@ -68,6 +132,12 @@ html, body {
 .button-grid .btn {
   min-width: 180px;
   text-align: center;
+}
+.button-grid h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0d47a1;
 }
 
 /* Sections */
@@ -145,6 +215,8 @@ html, body {
   height: auto;
   margin: 1rem 0;
   border-radius: 8px;
+  flex-basis: 100%;   /* heading takes the full row */
+  text-align: center;
 }
 
 /* Footer */
