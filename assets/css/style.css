@@ -16,7 +16,7 @@
   flex-direction: column;
 }*/
 html, body {
-background-color: #f4f8fb;
+
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #1a1a1a;
   line-height: 1.6;
@@ -39,14 +39,14 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 /* Middle gets its own scrollbar */
 #scroll-region {
-  overflow-y: auto;
+  overflow-y: visible;
   -webkit-overflow-scrolling: touch;
-             min-height: 100%;    /* make it fill available space */
+  min-height: auto;    /* make it fill available space */
   scroll-snap-type: y mandatory; /* enable vertical snap */
 }
 #scroll-region .section-block {
   scroll-snap-align: start;   /* each block snaps into view */
-       min-height: 80%; /* each takes full viewport height */
+       min-height: auto; /* each takes full viewport height */
   display: flex;
   flex-direction: column;
   justify-content: center;    /* center contents vertically */
@@ -93,11 +93,12 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-#scroll-region {
+/*#scroll-region {
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch; /* smooth on iOS */
+  -webkit-overflow-scrolling: touch;
   padding: 1rem;
 }
+*/
 
 /* Fixed bottom margin/strip */
 .bottom-strip {
@@ -268,13 +269,13 @@ footer {
 }
 
 body.dark {
-  background: radial-gradient(circle at top left, #1a1a1a, #0d1117 70%);
+  background: radial-gradient(circle at top left, #0d1117, #0d1117 70%);
   color: #e5e5e5;
 }
 
 body.dark .site-header {
-  background: linear-gradient(to right, rgba(25, 25, 25, 0.95), rgba(40, 40, 40, 0.95));
-  color: #a3c9f9;
+  /*background: linear-gradient(to right, rgba(25, 25, 25, 0.95), rgba(40, 40, 40, 0.95));*/
+  color: #f4f9ff;
   box-shadow: 0 6px 20px rgba(0,0,0,0.7);
   backdrop-filter: blur(8px);
 }
@@ -292,13 +293,15 @@ body.dark .btn:hover {
   transform: translateY(-2px);
 }
 
+
 body.dark .section-block {
-  background: rgba(20, 20, 25, 0.85);
+  /*background: rgba(20, 20, 25, 0.85);*/
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 6px 15px rgba(0,0,0,0.6);
   backdrop-filter: blur(6px);
 }
+
 body.dark .section-block h2,
 body.dark .section-block h3,
 body.dark .section-block h4 {
