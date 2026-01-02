@@ -1,105 +1,105 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resource Hub</title>
+
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdJO3_4ClcISCl775oYLcRQoO5uYKb2JK5zWjQhOSw5WrmVO-SqmK96oi8-YVhavH5KH0&usqp=CAU" />
 </head>
+
 <body>
+
+  <!-- ================= HEADER ================= -->
   <header class="site-header">
-    <h1>Welcome to the Sophomore Course Home</h1>
-    <p>Tired of frantically switching between Resobin,Course Drive,Asc and a hunedred other tabs one day before an exam?</p>
+    <h1>Welcome to the Course Home</h1>
+    <p>
+      Tired of frantically switching between Resobin, Course Drive, ASC,
+      and a hundred other tabs one day before an exam?
+    </p>
+
     <div class="theme-toggle-container">
       <label class="switch" aria-label="Toggle dark mode">
         <input type="checkbox" id="theme-toggle" />
         <span class="slider round"></span>
       </label>
     </div>
-
   </header>
 
-
-
-  <!-- Middle region: gets its OWN scrollbar -->
+  <!-- ================= MAIN CONTENT ================= -->
   <main class="content">
-    <!-- <section class="section-block">
+
+    <!-- ===== Core Resources ===== -->
+    <section class="section-block core-section">
       <h2>Core Resources</h2>
-      <section class="button-grid">
-        <a href="ee325.html" class="btn">EE325-Probability</a>
-        <a href="ee204.html" class="btn">EE204-Analog</a>
-        <a href="ee224.html" class="btn">EE224-Digital</a>
-        <a href="ee214.htm" class="btn">EE214-Digital Lab</a>
-        <a href="ec101.html" class="btn">Ec101-Economics</a>
-        <a href="ee229.html" class="btn">EE229-Signals</a>
-        <a href="ee240.html" class="btn">EE240-Power Lab</a>
+
+      <p class="section-subtitle">
+        Select a semester to view the corresponding course resources.
+      </p>
+
+      <!-- Semester Selector -->
+      <div class="semester-tabs">
+        <button class="semester-tab active" data-sem="sem3">Sem 3 </button>
+        <button class="semester-tab" data-sem="sem4">Sem 4(Current)</button>
+        <button class="semester-tab" data-sem="common">Common</button>
+      </div>
+
+      <!-- Semester 3 -->
+      <section class="button-grid semester-grid" data-sem="sem3">
+        <a href="ee325.html" class="btn">EE325 – Probability</a>
+        <a href="ee204.html" class="btn">EE204 – Analog</a>
+        <a href="ee224.html" class="btn">EE224 – Digital</a>
+        <a href="ee229.html" class="btn">EE229 – Signals</a>
+        <a href="ee240.html" class="btn">EE240 – Power Lab</a>
+        <a href="ee214.htm" class="btn">EE214 – Digital Lab</a>
       </section>
-    </section> -->
 
+      <!-- Semester 4 -->
+      <section class="button-grid semester-grid hidden" data-sem="sem4">
+        <p class="empty-state">
+          Resources for Semester 4 will be added soon.
+        </p>
+      </section>
 
-    <section class="section-block">
-  <h2>Core Resources</h2>
+      <!-- Common Courses -->
+      <section class="button-grid semester-grid hidden" data-sem="common">
+        <a href="ec101.html" class="btn">EC101 –Economics</a>
+        <a href="404.html" class="btn">DS203 – Programming for Data Science</a>
+      </section>
 
-  <!-- Semester Tabs -->
-  <div class="semester-tabs">
-    <button class="semester-tab active" data-sem="sem1">Sem 1</button>
-    <button class="semester-tab" data-sem="sem2">Sem 2</button>
-    <button class="semester-tab" data-sem="sem3">Sem 3</button>
-    <button class="semester-tab" data-sem="sem4">Sem 4</button>
-    <button class="semester-tab" data-sem="sem5">Sem 5</button>
-  </div>
+    </section>
 
-  <!-- Semester Content -->
-  <section class="button-grid semester-grid" data-sem="sem3">
-    <a href="ee325.html" class="btn">EE325-Probability</a>
-    <a href="ee204.html" class="btn">EE204-Analog</a>
-    <a href="ee224.html" class="btn">EE224-Digital</a>
-    <a href="ee229.html" class="btn">EE229-Signals</a>
-    <a href="ee240.html" class="btn">EE240-Power Lab</a>
-    <a href="ee214.htm" class="btn">EE214 Digital Lab</a>
+    <hr class="section-divider" />
 
-  </section>
+    <!-- ===== Additional ===== -->
+    <section class="section-block additional-section-block">
+      <h2>Additional</h2>
 
-  <section class="button-grid semester-grid hidden" data-sem="sem4">
-    
-  </section>
+      <section class="button-grid">
+        <a href="Calendar.html" class="btn secondary">Events & Deadlines</a>
+        <a href="about.html" class="btn secondary">About This Project</a>
+      </section>
+    </section>
 
-  <section class="button-grid semester-grid hidden" data-sem="common courses">
-    <a href="404.html" class="btn">Ds203-Programming for DS</a>
-  </section>
-
-</section>
-
-    
   </main>
 
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <h3>Note</h3>
+    <p>
+      This is a personal prototype and an ongoing mini project.
+      A lot of work remains, and contributions are welcome.
+      <br /><br />
+      Interested folks may contact me directly.
+    </p>
+  </footer>
 
-
-     
-  <hr style="border: 0; border-top: 1px solid #ccc; margin: 2em 0;">
-  <section class="section-block additional-section-block">
-        <h2>Additional</h2>
-  <section class="button-grid">
-    <a href="Calendar.html" class="btn">Events and Deadlines</a>
-    <a href="about.html" class="btn">About us</a>
-
-  </section>
-  </section>
-
-   
-  <hr style="border: 0; margin: 0em 0;">
-<footer>
-  <h2>Note</h2>
-  <p>
-  This is only a prototype-a personal mini project.A lot of work needs to be done.Hopefully other enthu folks  also chip in.
-  <br>
- Interested folks pls contact me (7058144927)
-
-  </p>
-</footer>
-
+  <!-- Utilities -->
   <button id="scrollToTop" title="Back to top">↑</button>
+
   <script src="assets/js/script.js"></script>
+
 </body>
 </html>
