@@ -16,16 +16,11 @@
   flex-direction: column;
 }*/
 html, body {
-
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #1a1a1a;
   line-height: 1.6;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto; /* header | scrollable | bottom */
 }
 
 /* Header stays at top */
@@ -38,19 +33,6 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Middle gets its own scrollbar */
-#scroll-region {
-  overflow-y: visible;
-  -webkit-overflow-scrolling: touch;
-  min-height: auto;    /* make it fill available space */
-  scroll-snap-type: y mandatory; /* enable vertical snap */
-}
-#scroll-region .section-block {
-  scroll-snap-align: start;   /* each block snaps into view */
-       min-height: auto; /* each takes full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;    /* center contents vertically */
-}
 
 /* Bottom section always visible */
 .upcoming, footer {
