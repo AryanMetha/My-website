@@ -27,3 +27,29 @@ window.addEventListener('scroll', () => {
 scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+// ------------------------------
+// Semester Tab Switching Logic
+// ------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const semesterTabs = document.querySelectorAll(".semester-tab");
+  const semesterGrids = document.querySelectorAll(".semester-grid");
+
+  // If page does not have semester tabs, exit safely
+  if (!semesterTabs.length || !semesterGrids.length) return;
+
+  semesterTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const selectedSem = tab.dataset.sem;
+
+      // Update active tab
+      semesterTabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      // Show only matching semester grid
+      semesterGrids.forEach(grid => {
+        const isMatch = grid.dataset.sem === selectedSem;
+        grid.classList.toggle("hidden", !isMatch);
+      });
+    });
+  });
+});

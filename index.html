@@ -24,7 +24,7 @@
 
   <!-- Middle region: gets its OWN scrollbar -->
   <main class="content">
-    <section class="section-block">
+    <!-- <section class="section-block">
       <h2>Core Resources</h2>
       <section class="button-grid">
         <a href="ee325.html" class="btn">EE325-Probability</a>
@@ -35,7 +35,41 @@
         <a href="ee229.html" class="btn">EE229-Signals</a>
         <a href="ee240.html" class="btn">EE240-Power Lab</a>
       </section>
-    </section>
+    </section> -->
+
+
+    <section class="section-block">
+  <h2>Core Resources</h2>
+
+  <!-- Semester Tabs -->
+  <div class="semester-tabs">
+    <button class="semester-tab active" data-sem="sem1">Sem 1</button>
+    <button class="semester-tab" data-sem="sem2">Sem 2</button>
+    <button class="semester-tab" data-sem="sem3">Sem 3</button>
+    <button class="semester-tab" data-sem="sem4">Sem 4</button>
+    <button class="semester-tab" data-sem="sem5">Sem 5</button>
+  </div>
+
+  <!-- Semester Content -->
+  <section class="button-grid semester-grid" data-sem="sem3">
+    <a href="ee325.html" class="btn">EE325-Probability</a>
+    <a href="ee204.html" class="btn">EE204-Analog</a>
+    <a href="ee224.html" class="btn">EE224-Digital</a>
+    <a href="ee229.html" class="btn">EE229-Signals</a>
+    <a href="ee240.html" class="btn">EE240-Power Lab</a>
+    <a href="ee214.htm" class="btn">EE214 Digital Lab</a>
+
+  </section>
+
+  <section class="button-grid semester-grid hidden" data-sem="sem4">
+    
+  </section>
+
+  <section class="button-grid semester-grid hidden" data-sem="common courses">
+    <a href="404.html" class="btn">Ds203-Programming for DS</a>
+  </section>
+
+</section>
 
     
   </main>
