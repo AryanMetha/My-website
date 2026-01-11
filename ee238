@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EE238</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>EE238-Power II</h1>
+    <div class="theme-toggle-container">
+      <label class="switch" aria-label="Toggle dark mode">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </header>
+  <main class="content">
+   <section class="section-block">
+  <h2>Grading</h2>
+  <div class="image-group">
+    <figure>
+      <img src="assets/images/ee207.png" alt="Grading :previous offering prof. A. Tulapurkar" />
+      <figcaption>Grading :Grading :previous offering prof. A. Tulapurkar(general trend is the same)</figcaption>
+    </figure>
+
+
+  </div>
+</section>
+
+  <section class="section-block">
+    <p>
+        <h2>Dual Degree(S2)</h2>
+        
+    </p>
+  </section>
+<section class="section-block">
+  <h2>B.Tech(S1)</h2>
+
+   
+    
+ 
+
+  
+</section>
+<section class="section-block">
+  <h2>Resources</h2>
+  <div class="button-grid">
+    <a href="https://drive.google.com/file/d/123b9qWpLw-WlRRYkvGlSR_O1igsltcEq/view?usp=sharing" class="btn">Handwritten Notes(sandeep anand)</a>
+
+
+  </main>
+
+  <footer>
+    <a href="index.html" class="btn back-btn">Back to Home</a>
+  </footer>
+  <button id="scrollToTop" title="Back to top">↑</button>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+  

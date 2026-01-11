@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Public Service Announcement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #171a2e;
+      --accent: #6cf2c2;
+      --accent-2: #8aa2ff;
+      --text: #e6e9ff;
+      --muted: #aab0ff;
+      --danger: #ff6b6b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #1f2350 0%, transparent 60%),
+        radial-gradient(800px 400px at 90% 10%, #1a3b2f 0%, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+
+    .card {
+      max-width: 720px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)) , var(--card);
+      border-radius: 20px;
+      padding: 48px 44px;
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      background: rgba(138,162,255,0.15);
+      color: var(--accent-2);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      margin: 0 0 16px 0;
+      font-weight: 800;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin: 0 0 20px 0;
+    }
+
+    .callout {
+      margin: 28px 0;
+      padding: 22px 24px;
+      border-left: 4px solid var(--danger);
+      background: rgba(255, 107, 107, 0.08);
+      border-radius: 12px;
+    }
+
+    .callout strong {
+      color: var(--danger);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 22px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b0f1c;
+      box-shadow: 0 10px 30px rgba(108,242,194,0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 36px rgba(108,242,194,0.35);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    footer {
+      margin-top: 36px;
+      font-size: 0.85rem;
+      color: #8a90e6;
+      opacity: 0.7;
+      text-align: center;
+    }
+
+    /* Decorative floating code */
+    .code {
+      position: absolute;
+      top: -40px;
+      right: -20px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.85rem;
+      color: rgba(138,162,255,0.25);
+      transform: rotate(8deg);
+      user-select: none;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="code">
+      &lt;search&gt;DE250 resources&lt;/search&gt;<br/>
+      &lt;status&gt;terminally online&lt;/status&gt;
+    </div>
+
+    <span class="badge">Friendly Roast</span>
+
+    <h1>
+      Congratulations,<br />
+      you absolute <span>nerd</span>.
+    </h1>
+
+    <p>
+      You really went out of your way to look up <strong>DE250 resources</strong>.
+      That’s dedication. Impressive, even. Deeply, profoundly nerdy — but impressive.
+    </p>
+
+    <div class="callout">
+      <p>
+        <strong>Important notice:</strong><br/>
+        Your monitor will still be here later. The sun, however, is currently outside.
+      </p>
+    </div>
+
+    <p>
+      This is your gentle reminder to step away from the tabs, close the PDFs,
+      and <em>touch some grass</em>. Preferably real grass. With photosynthesis.
+    </p>
+
+    <div class="actions">
+      <button class="btn btn-primary" onclick="alert('Excellent choice. Go forth and touch grass.')">
+        Touch Grass
+      </button>
+      <button class="btn btn-secondary" onclick="alert('Bold move. Still a nerd, though.')">
+        Keep Reading DE250 Stuff
+      </button>
+    </div>
+
+    <footer>
+      
+    <a href="index.html" class="btn back-btn">Back to Home</a>
+
+    </footer>
+  </div>
+</body>
+</html>
