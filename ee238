@@ -20,8 +20,8 @@
   <h2>Grading</h2>
   <div class="image-group">
     <figure>
-      <img src="assets/images/ee207.png" alt="Grading :previous offering prof. A. Tulapurkar" />
-      <figcaption>Grading :Grading :previous offering prof. A. Tulapurkar(general trend is the same)</figcaption>
+      <img src="assets/images/ee238.png" alt="Grading :previous offering prof. A. Tulapurkar" />
+      <figcaption>Grading :Grading :previous offering prof. Saneep Anand(general trend is the same)</figcaption>
     </figure>
 
 
@@ -47,7 +47,8 @@
   <h2>Resources</h2>
   <div class="button-grid">
     <a href="https://drive.google.com/file/d/123b9qWpLw-WlRRYkvGlSR_O1igsltcEq/view?usp=sharing" class="btn">Handwritten Notes(sandeep anand)</a>
-
+    <a href="https://drive.google.com/drive/folders/1Lx60tI8uhDR-xmbxUVpn7XN2c7jf0egm" class="btn">Lecture Recodings(Sandeep Anand)</a>
+    <a href="https://iitbacin.sharepoint.com/:f:/r/sites/EE-coursedrive/Shared%20Documents/EE%20238?csf=1&web=1&e=kOKhps" class="btn">Course Drive</a>
 
   </main>
 
