@@ -31,13 +31,22 @@
   <section class="section-block">
     <p>
         <h2>Dual Degree(S2)</h2>
-        
+        <ul>
+       <li> Quizzes             30 % (best 3 out of 4 quizzes)     </li>     
+      <li>Mid Sem.          25 % </li>
+      <li>End Sem.          40 %        </li>
+      <li>Attendance          5 % (student attendance ≥70% gets 3/5, ≥90% gets 5/5, less than 70% gets 0 , less than 50 gets DX) </li>
+        </ul>
     </p>
   </section>
 <section class="section-block">
   <h2>B.Tech(S1)</h2>
 
-   
+   <ul>
+    <li>Quizzes (best 2/3) 30%</li>
+    <li>Midsem 25%</li>
+    <li>Endsem 45%</li>
+   </ul>
     
  
 
