@@ -1,103 +1,92 @@
-/* Global Reset and Base Styles */
+/* =========================================================
+   GLOBAL RESET AND BASE STYLES
+   ========================================================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out,
+    border-color 0.4s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 
-/*html, body {
+/* =========================================================
+   THEME VARIABLES
+   ========================================================= */
+
+:root {
+  /* Main theme */
+  --primary: #490B24;
+  --primary-hover: #641333;
+  --accent: #B5BEDD;
+
+  /* Light mode */
+  --background: #F7F8FC;
+  --surface: #FFFFFF;
+  --text: #1A1A1A;
+  --muted-text: #555555;
+  --border: #B5BEDD;
+
+  /* Shadows */
+  --shadow: rgba(73, 11, 36, 0.15);
+}
+
+
+/* =========================================================
+   HTML / BODY
+   ========================================================= */
+
+html,
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f8fb;
-  color: #1a1a1a;
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}*/
-html, body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1a1a1a;
+  background-color: var(--background);
+  color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
   margin: 0;
 }
 
-/* Header stays at top */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 .site-header {
-  background: linear-gradient(to right, #0d47a1, #1976d2);
-  color: #fff;
+  background: linear-gradient(
+    to right,
+    #490B24,
+    #641333
+  );
+
+  color: #FFFFFF;
   padding: 2rem 1rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  box-shadow:
+    0 4px 10px rgba(73, 11, 36, 0.25);
 }
 
-/* Middle gets its own scrollbar */
-
-
-/* Bottom section always visible */
-.upcoming, footer {
-  background: #e3f2fd;
-}
-
-/* Header */
-.site-header {
-  background: linear-gradient(to right, #0d47a1, #1976d2);
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 .site-header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
+
 .site-header p {
   font-size: 1.1rem;
   opacity: 0.9;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #1976d2;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.btn:hover {
-  background-color: #1565c0;
-  transform: translateY(-2px);
-}
-.back-btn {
-  margin-top: 2rem;
-}
 
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
 
-/*#scroll-region {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 1rem;
-}
-*/
-
-/* Fixed bottom margin/strip */
-.bottom-strip {
-  border-top: 1px solid #ccc;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-}
-.bottom-strip hr {
-  width: 100%;
-  border: 0;
-  border-top: 1px solid #ccc;
-}
-
-/* Main Content Layout */
 .content {
   flex: 1;
   padding: 2rem 1rem;
@@ -105,351 +94,372 @@ html, body {
   margin: 0 auto;
 }
 
-/* Button Grid for Index */
-.button-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem 1rem;
-  gap: 1rem;
-}
-.button-grid .btn {
-  min-width: 180px;
-  text-align: center;
-}
-.button-grid h2 {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #0d47a1;
-}
 
-/* Sections */
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
 .section-block {
   margin: 2rem auto;
   max-width: 900px;
   padding: 1rem;
 }
+
 .section-block h2 {
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 1rem;
-  color: #0d47a1;
+  color: #490B24;
 }
+
 .section-block p {
   font-size: 1rem;
-  color: #333;
+  color: #333333;
 }
-.section-block h3, .section-block h4 {
-  color: #0d47a1;
+
+.section-block h3,
+.section-block h4 {
+  color: #490B24;
   margin-top: 1rem;
 }
 
-/* Image Groups */
-.image-group {
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  display: inline-block;
+
+  padding: 0.75rem 1.5rem;
+
+  background-color: #490B24;
+  color: #FFFFFF;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #641333;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(73, 11, 36, 0.25);
+}
+
+.back-btn {
+  margin-top: 2rem;
+}
+
+
+/* =========================================================
+   BUTTON GRID
+   ========================================================= */
+
+.button-grid {
   display: flex;
   flex-wrap: wrap;
+
+  justify-content: center;
+
+  padding: 2rem 1rem;
+
   gap: 1rem;
+}
+
+.button-grid .btn {
+  min-width: 180px;
+  text-align: center;
+}
+
+.button-grid h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #490B24;
+}
+
+
+/* =========================================================
+   SEMESTER TABS
+   ========================================================= */
+
+.semester-tabs {
+  display: flex;
+
+  gap: 0.75rem;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  margin: 1rem 0 2rem;
+}
+
+.semester-tab {
+  padding: 0.45rem 1.1rem;
+
+  border-radius: 999px;
+
+  border: 1px solid #490B24;
+
+  background: transparent;
+
+  color: #490B24;
+
+  cursor: pointer;
+
+  font-size: 0.9rem;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.semester-tab:hover {
+  background-color: #B5BEDD;
+
+  color: #490B24;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 3px 8px rgba(73, 11, 36, 0.12);
+}
+
+.semester-tab.active {
+  background-color: #490B24;
+
+  color: #FFFFFF;
+
+  border-color: #490B24;
+
+  box-shadow:
+    0 4px 10px rgba(73, 11, 36, 0.2);
+}
+
+
+/* Hide inactive semester sections */
+.hidden {
+  display: none;
+}
+
+
+/* =========================================================
+   IMAGE GROUPS
+   ========================================================= */
+
+.image-group {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
   justify-content: center;
 }
+
 .image-group figure {
   max-width: 300px;
   text-align: center;
 }
+
 .image-group img {
   width: 100%;
   height: auto;
+
   border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+
+  box-shadow:
+    0 3px 8px rgba(73, 11, 36, 0.15);
 }
+
 .image-group figcaption {
   margin-top: 0.5rem;
+
   font-size: 0.9rem;
-  color: #666;
+
+  color: #666666;
 }
 
-/* Upcoming Features */
-.upcoming {
-  background-color: #e3f2fd;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-.upcoming h2 {
-  font-size: 2rem;
-  color: #0d47a1;
-  margin-bottom: 1rem;
-}
-.upcoming ul {
-  list-style: disc;
-  padding: 1.5rem;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-.upcoming li {
-  font-size: 1.1rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #ccc;
-}
 
-/* Responsive Image */
+/* =========================================================
+   RESPONSIVE IMAGE
+   ========================================================= */
+
 .responsive-image {
   display: block;
+
   max-width: 100%;
+
   height: auto;
+
   margin: 1rem 0;
+
   border-radius: 8px;
-  flex-basis: 100%;   /* heading takes the full row */
+
+  flex-basis: 100%;
+
   text-align: center;
 }
 
-/* Footer */
-footer {
+
+/* =========================================================
+   UPCOMING FEATURES
+   ========================================================= */
+
+.upcoming {
+  background-color: rgba(181, 190, 221, 0.45);
+
+  padding: 2rem 1rem;
+
   text-align: center;
-  padding: 1rem;
-  background-color: #e3f2fd;
-  margin-top: auto;
+
+  border-radius: 12px;
 }
 
-/* 404 Page Specific */
-.error-code {
-  font-size: 6rem;
-  color: #e53935;
+.upcoming h2 {
+  font-size: 2rem;
+
+  color: #490B24;
+
   margin-bottom: 1rem;
 }
-.error-msg {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
 
+.upcoming ul {
+  list-style: disc;
 
-
-/* Scroll To Top Button */
-#scrollToTop {
-  position: fixed;
-  bottom: 2rem;
-  right: 1.5rem;
-  padding: 0.7rem 1rem;
-  font-size: 1.2rem;
-  background-color: #1976d2;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  display: none;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-#scrollToTop:hover {
-  background-color: #1565c0;
-}
-
-* {
-  transition: background-color 0.4s ease-in-out,
-              color 0.4s ease-in-out,
-              box-shadow 0.4s ease-in-out,
-              border-color 0.4s ease-in-out,
-              transform 0.3s ease-in-out;
-}
-
-body.dark {
-  background: radial-gradient(circle at top left, #0d1117, #0d1117 70%);
-  color: #e5e5e5;
-}
-
-body.dark .site-header {
-  /*background: linear-gradient(to right, rgba(25, 25, 25, 0.95), rgba(40, 40, 40, 0.95));*/
-  color: #f4f9ff;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
-  backdrop-filter: blur(8px);
-}
-
-body.dark .btn {
-  background: rgba(40, 40, 50, 0.85);
-  color: #f0f0f0;
-  border: 1px solid rgba(255,255,255,0.05);
-  backdrop-filter: blur(4px);
-}
-body.dark .btn:hover {
-  background: #1976d2;
-  color: #fff;
-  box-shadow: 0 0 12px rgba(25,118,210,0.7);
-  transform: translateY(-2px);
-}
-
-
-body.dark .section-block {
-  /*background: rgba(20, 20, 25, 0.85);*/
-  border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
-  backdrop-filter: blur(6px);
+
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  text-align: left;
 }
 
-body.dark .section-block h2,
-body.dark .section-block h3,
-body.dark .section-block h4 {
-  color: #90caf9;
-}
-body.dark .section-block p {
-  color: #cfcfcf;
-}
+.upcoming li {
+  font-size: 1.1rem;
 
-body.dark .upcoming {
-  background: rgba(25, 25, 30, 0.85);
-  color: #e0e0e0;
-  border-radius: 12px;
-  box-shadow: inset 0 2px 6px rgba(255,255,255,0.05);
-  backdrop-filter: blur(4px);
-}
-body.dark .upcoming li {
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
+  padding: 0.5rem 0;
 
-body.dark .bordered-table {
-  border-color: rgba(255,255,255,0.1);
-}
-body.dark .bordered-table th {
-  background: rgba(30, 30, 40, 0.9);
-  color: #90caf9;
-}
-body.dark .bordered-table td {
-  background-color: rgba(20, 20, 30, 0.8);
-  color: #ddd;
-  border-color: rgba(255,255,255,0.05);
-}
-
-body.dark .image-group img,
-body.dark .responsive-image {
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.8);
-  transition: transform 0.3s ease;
-}
-body.dark .image-group img:hover {
-  transform: scale(1.03);
-}
-
-body.dark footer {
-  background-color: rgba(15, 15, 20, 0.9);
-  color: #aaa;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.6);
-}
-
-body.dark #scrollToTop {
-  background: rgba(40, 40, 50, 0.9);
-  border: 1px solid rgba(255,255,255,0.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-}
-body.dark #scrollToTop:hover {
-  background-color: #1976d2;
-  box-shadow: 0 0 10px rgba(25,118,210,0.7);
-}
-
-body.dark .credit-text h3 {
-  color: #90caf9;
+  border-bottom:
+    1px solid rgba(73, 11, 36, 0.15);
 }
 
 
-.theme-toggle-container {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  z-index: 100;
+/* =========================================================
+   BOTTOM STRIP
+   ========================================================= */
+
+.bottom-strip {
+  border-top:
+    1px solid rgba(73, 11, 36, 0.15);
+
+  background: #FFFFFF;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 1rem;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 26px;
+.bottom-strip hr {
+  width: 100%;
+
+  border: 0;
+
+  border-top:
+    1px solid rgba(73, 11, 36, 0.15);
 }
 
-/* Hide default checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  text-align: center;
+
+  padding: 1rem;
+
+  background-color: rgba(181, 190, 221, 0.45);
+
+  margin-top: auto;
+
+  color: #490B24;
 }
 
-/* The slider background */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 34px;
-}
 
-/* The sliding circle */
-.slider::before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
+/* =========================================================
+   TABLES
+   ========================================================= */
 
-/* Checked state */
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:checked + .slider::before {
-  transform: translateX(24px);
-}
-
-/* Optional for better appearance */
-.slider.round {
-  border-radius: 34px;
-}
-.slider.round::before {
-  border-radius: 50%;
-}
 .bordered-table {
   width: 100%;
-  border: 1px solid #1976d2;
+
+  border: 1px solid #B5BEDD;
+
   border-collapse: collapse;
+
   font-size: 0.9rem;
+
   color: inherit;
+
   font-family: inherit;
 }
+
 .bordered-table th,
 .bordered-table td {
-  border: 1px solid #1976d2;
-  padding: 0.3rem 0.6rem;
+  border:
+    1px solid #B5BEDD;
+
+  padding:
+    0.3rem 0.6rem;
 }
+
 .bordered-table th {
   font-weight: bold;
-  background: #e3f2fd;
-  color: #0d47a1;
+
+  background-color: #B5BEDD;
+
+  color: #490B24;
 }
-body.dark .bordered-table th {
-  background: #222b36;
-  color: #90caf9;
-}
-body.dark .bordered-table td {
-  border-color: #444;
-}
+
+
+/* =========================================================
+   CREDIT SECTION
+   ========================================================= */
+
 .credit-entry {
   display: flex;
+
   align-items: center;
+
   gap: 1rem;
+
   margin: 1.5rem 0;
 }
 
 .credit-entry img {
   width: 100px;
   height: 100px;
+
   border-radius: 12px;
+
   object-fit: cover;
+
   flex-shrink: 0;
 }
 
@@ -459,48 +469,597 @@ body.dark .bordered-table td {
 
 .credit-text h3 {
   margin: 0 0 0.3rem;
+
   font-size: 1.2rem;
+
+  color: #490B24;
 }
+
+
+/* =========================================================
+   HORIZONTAL RULE
+   ========================================================= */
 
 hr {
   border: none;
-  border-top: 1px solid #444;
+
+  border-top:
+    1px solid rgba(73, 11, 36, 0.2);
+
   margin: 1rem 0;
 }
-.semester-tabs {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 1rem 0 2rem;
+
+
+/* =========================================================
+   404 PAGE
+   ========================================================= */
+
+.error-code {
+  font-size: 6rem;
+
+  color: #490B24;
+
+  margin-bottom: 1rem;
 }
 
-.semester-tab {
-  padding: 0.45rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid #1976d2;
-  background: transparent;
-  color: #1976d2;
-  cursor: pointer;
-  font-size: 0.9rem;
+.error-msg {
+  font-size: 1.5rem;
+
+  margin-bottom: 2rem;
 }
 
-.semester-tab.active {
-  background: #1976d2;
-  color: #fff;
-}
 
-.hidden {
+/* =========================================================
+   SCROLL TO TOP BUTTON
+   ========================================================= */
+
+#scrollToTop {
+  position: fixed;
+
+  bottom: 2rem;
+
+  right: 1.5rem;
+
+  padding: 0.7rem 1rem;
+
+  font-size: 1.2rem;
+
+  background-color: #490B24;
+
+  color: #FFFFFF;
+
+  border: none;
+
+  border-radius: 50%;
+
   display: none;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 10px rgba(73, 11, 36, 0.3);
 }
 
-/* Dark mode compatibility */
+#scrollToTop:hover {
+  background-color: #641333;
+
+  box-shadow:
+    0 0 12px rgba(73, 11, 36, 0.5);
+}
+
+
+/* =========================================================
+   THEME TOGGLE
+   ========================================================= */
+
+.theme-toggle-container {
+  position: absolute;
+
+  top: 1.5rem;
+
+  right: 1.5rem;
+
+  z-index: 100;
+}
+
+.switch {
+  position: relative;
+
+  display: inline-block;
+
+  width: 50px;
+
+  height: 26px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+
+  width: 0;
+
+  height: 0;
+}
+
+
+/* Slider */
+.slider {
+  position: absolute;
+
+  cursor: pointer;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background-color: #B5BEDD;
+
+  transition: 0.4s;
+
+  border-radius: 34px;
+}
+
+
+/* Sliding circle */
+.slider::before {
+  position: absolute;
+
+  content: "";
+
+  height: 20px;
+
+  width: 20px;
+
+  left: 3px;
+
+  bottom: 3px;
+
+  background-color: #FFFFFF;
+
+  transition: 0.4s;
+
+  border-radius: 50%;
+}
+
+
+/* Checked state */
+input:checked + .slider {
+  background-color: #490B24;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+
+/* Rounded slider */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark {
+  background:
+    radial-gradient(
+      circle at top left,
+      #21151C,
+      #151018 70%
+    );
+
+  color: #EDE8EB;
+}
+
+
+/* ---------------------------------------------------------
+   Dark Header
+   --------------------------------------------------------- */
+
+body.dark .site-header {
+  background:
+    linear-gradient(
+      to right,
+      #490B24,
+      #641333
+    );
+
+  color: #F4F9FF;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.7);
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* ---------------------------------------------------------
+   Dark Buttons
+   --------------------------------------------------------- */
+
+body.dark .btn {
+  background:
+    rgba(42, 23, 32, 0.9);
+
+  color: #EDE8EB;
+
+  border:
+    1px solid rgba(181, 190, 221, 0.15);
+
+  backdrop-filter: blur(4px);
+}
+
+body.dark .btn:hover {
+  background-color: #490B24;
+
+  color: #FFFFFF;
+
+  box-shadow:
+    0 0 12px rgba(73, 11, 36, 0.7);
+
+  transform: translateY(-2px);
+}
+
+
+/* ---------------------------------------------------------
+   Dark Section Blocks
+   --------------------------------------------------------- */
+
+body.dark .section-block {
+  border-radius: 12px;
+
+  padding: 1.5rem;
+
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.6);
+
+  backdrop-filter: blur(6px);
+}
+
+body.dark .section-block h2,
+body.dark .section-block h3,
+body.dark .section-block h4 {
+  color: #B5BEDD;
+}
+
+body.dark .section-block p {
+  color: #CFCFCF;
+}
+
+
+/* ---------------------------------------------------------
+   Dark Semester Tabs
+   --------------------------------------------------------- */
+
 body.dark .semester-tab {
-  border-color: #90caf9;
-  color: #90caf9;
-}
-body.dark .semester-tab.active {
-  background: #1976d2;
-  color: #fff;
+  border-color: #B5BEDD;
+
+  color: #B5BEDD;
+
+  background: transparent;
 }
 
+body.dark .semester-tab:hover {
+  background:
+    rgba(181, 190, 221, 0.15);
+
+  color: #B5BEDD;
+}
+
+body.dark .semester-tab.active {
+  background-color: #490B24;
+
+  color: #FFFFFF;
+
+  border-color: #490B24;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ---------------------------------------------------------
+   Dark Upcoming
+   --------------------------------------------------------- */
+
+body.dark .upcoming {
+  background:
+    rgba(42, 23, 32, 0.85);
+
+  color: #E0E0E0;
+
+  border-radius: 12px;
+
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.03);
+
+  backdrop-filter: blur(4px);
+}
+
+body.dark .upcoming h2 {
+  color: #B5BEDD;
+}
+
+body.dark .upcoming li {
+  border-bottom:
+    1px solid rgba(181, 190, 221, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   Dark Tables
+   --------------------------------------------------------- */
+
+body.dark .bordered-table {
+  border-color:
+    rgba(181, 190, 221, 0.2);
+}
+
+body.dark .bordered-table th {
+  background:
+    rgba(73, 11, 36, 0.8);
+
+  color: #B5BEDD;
+
+  border-color:
+    rgba(181, 190, 221, 0.15);
+}
+
+body.dark .bordered-table td {
+  background-color:
+    rgba(30, 20, 27, 0.8);
+
+  color: #DDDDDD;
+
+  border-color:
+    rgba(181, 190, 221, 0.1);
+}
+
+
+/* ---------------------------------------------------------
+   Dark Images
+   --------------------------------------------------------- */
+
+body.dark .image-group img,
+body.dark .responsive-image {
+  border:
+    1px solid rgba(181, 190, 221, 0.08);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.8);
+
+  transition:
+    transform 0.3s ease;
+}
+
+body.dark .image-group img:hover {
+  transform: scale(1.03);
+}
+
+
+/* ---------------------------------------------------------
+   Dark Footer
+   --------------------------------------------------------- */
+
+body.dark footer {
+  background:
+    rgba(15, 15, 20, 0.9);
+
+  color: #B5BEDD;
+
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 -2px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ---------------------------------------------------------
+   Dark Bottom Strip
+   --------------------------------------------------------- */
+
+body.dark .bottom-strip {
+  background:
+    rgba(21, 16, 24, 0.95);
+
+  border-top:
+    1px solid rgba(181, 190, 221, 0.1);
+}
+
+
+/* ---------------------------------------------------------
+   Dark Scroll To Top
+   --------------------------------------------------------- */
+
+body.dark #scrollToTop {
+  background:
+    rgba(42, 23, 32, 0.9);
+
+  border:
+    1px solid rgba(181, 190, 221, 0.1);
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+body.dark #scrollToTop:hover {
+  background-color: #490B24;
+
+  box-shadow:
+    0 0 10px rgba(73, 11, 36, 0.7);
+}
+
+
+/* ---------------------------------------------------------
+   Dark Credit Section
+   --------------------------------------------------------- */
+
+body.dark .credit-text h3 {
+  color: #B5BEDD;
+}
+
+
+/* ---------------------------------------------------------
+   Dark HR
+   --------------------------------------------------------- */
+
+body.dark hr {
+  border-top:
+    1px solid rgba(181, 190, 221, 0.15);
+}
+
+
+/* ---------------------------------------------------------
+   Dark 404
+   --------------------------------------------------------- */
+
+body.dark .error-code {
+  color: #B5BEDD;
+}
+
+body.dark .error-msg {
+  color: #EDE8EB;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .site-header h1 {
+    font-size: 2rem;
+  }
+
+  .site-header p {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .section-block {
+    padding: 0.75rem;
+  }
+
+  .button-grid {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .button-grid .btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .semester-tabs {
+    gap: 0.5rem;
+  }
+
+  .semester-tab {
+    padding: 0.4rem 0.9rem;
+  }
+
+  .theme-toggle-container {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .credit-entry {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .credit-text {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .site-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .site-header p {
+    font-size: 0.9rem;
+  }
+
+  .section-block h2 {
+    font-size: 1.5rem;
+  }
+
+  .semester-tabs {
+    gap: 0.4rem;
+  }
+
+  .semester-tab {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .error-code {
+    font-size: 4rem;
+  }
+
+  .error-msg {
+    font-size: 1.2rem;
+  }
+
+  #scrollToTop {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Pulsing dot for current semester */
+.semester-tab.current-sem::after {
+  content: "";
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  margin-left: 7px;
+
+  background-color: #B5BEDD;
+  border-radius: 50%;
+
+  animation: currentPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes currentPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(181, 190, 221, 0.6);
+  }
+
+  50% {
+    transform: scale(1.25);
+    opacity: 0.8;
+    box-shadow: 0 0 0 5px rgba(181, 190, 221, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(181, 190, 221, 0);
+  }
+}
